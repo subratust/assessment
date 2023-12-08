@@ -1,0 +1,395 @@
+PS C:\Users\abhgupta10\terraform\terraform_training_4thdec_8thdec\day5\ProjectA> terraform workspace select dev
+Switched to workspace "dev".
+PS C:\Users\abhgupta10\terraform\terraform_training_4thdec_8thdec\day5\ProjectA> terraform plan
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following   
+symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_subnet.mysubnets[0] will be created
+  + resource "aws_subnet" "mysubnets" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = "us-east-1a"
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.1.0.0/20"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = false
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Name" = "mysubnet-0-dev"
+        }
+      + tags_all                                       = {
+          + "Name" = "mysubnet-0-dev"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
+  # aws_subnet.mysubnets[1] will be created
+  + resource "aws_subnet" "mysubnets" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = "us-east-1a"
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.1.16.0/20"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = false
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Name" = "mysubnet-1-dev"
+        }
+      + tags_all                                       = {
+          + "Name" = "mysubnet-1-dev"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
+  # module.bucket_for_vpc.aws_vpc.custom_vpc will be created
+  + resource "aws_vpc" "custom_vpc" {
+      + arn                                  = (known after apply)
+      + cidr_block                           = "10.1.0.0/16"
+      + default_network_acl_id               = (known after apply)
+      + default_route_table_id               = (known after apply)
+      + default_security_group_id            = (known after apply)
+      + dhcp_options_id                      = (known after apply)
+      + enable_dns_hostnames                 = (known after apply)
+      + enable_dns_support                   = true
+      + enable_network_address_usage_metrics = (known after apply)
+      + id                                   = (known after apply)
+      + instance_tenancy                     = "default"
+      + ipv6_association_id                  = (known after apply)
+      + ipv6_cidr_block                      = (known after apply)
+      + ipv6_cidr_block_network_border_group = (known after apply)
+      + main_route_table_id                  = (known after apply)
+      + owner_id                             = (known after apply)
+      + tags                                 = {
+          + "Environment" = "dev"
+          + "Name"        = "my-VPC-dev"
+        }
+      + tags_all                             = {
+          + "Environment" = "dev"
+          + "Name"        = "my-VPC-dev"
+        }
+    }
+
+Plan: 3 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + vpc_id = (known after apply)
+
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+
+PS C:\Users\abhgupta10\terraform\terraform_training_4thdec_8thdec\day5\ProjectA> terraform apply --auto-approve
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following   
+symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_subnet.mysubnets[0] will be created
+  + resource "aws_subnet" "mysubnets" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = "us-east-1a"
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.1.0.0/20"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = false
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Name" = "mysubnet-0-dev"
+        }
+      + tags_all                                       = {
+          + "Name" = "mysubnet-0-dev"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
+  # aws_subnet.mysubnets[1] will be created
+  + resource "aws_subnet" "mysubnets" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = "us-east-1a"
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.1.16.0/20"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = false
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Name" = "mysubnet-1-dev"
+        }
+      + tags_all                                       = {
+          + "Name" = "mysubnet-1-dev"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
+  # module.bucket_for_vpc.aws_vpc.custom_vpc will be created
+  + resource "aws_vpc" "custom_vpc" {
+      + arn                                  = (known after apply)
+      + cidr_block                           = "10.1.0.0/16"
+      + default_network_acl_id               = (known after apply)
+      + default_route_table_id               = (known after apply)
+      + default_security_group_id            = (known after apply)
+      + dhcp_options_id                      = (known after apply)
+      + enable_dns_hostnames                 = (known after apply)
+      + enable_dns_support                   = true
+      + enable_network_address_usage_metrics = (known after apply)
+      + id                                   = (known after apply)
+      + instance_tenancy                     = "default"
+      + ipv6_association_id                  = (known after apply)
+      + ipv6_cidr_block                      = (known after apply)
+      + ipv6_cidr_block_network_border_group = (known after apply)
+      + main_route_table_id                  = (known after apply)
+      + owner_id                             = (known after apply)
+      + tags                                 = {
+          + "Environment" = "dev"
+          + "Name"        = "my-VPC-dev"
+        }
+      + tags_all                             = {
+          + "Environment" = "dev"
+          + "Name"        = "my-VPC-dev"
+        }
+    }
+
+Plan: 3 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + vpc_id = (known after apply)
+module.bucket_for_vpc.aws_vpc.custom_vpc: Creating...
+module.bucket_for_vpc.aws_vpc.custom_vpc: Creation complete after 5s [id=vpc-0ba33abe680c6c9c4]
+aws_subnet.mysubnets[1]: Creating...
+aws_subnet.mysubnets[0]: Creating...
+aws_subnet.mysubnets[0]: Creation complete after 2s [id=subnet-07fc90f85c3790543]
+aws_subnet.mysubnets[1]: Creation complete after 2s [id=subnet-06306f42ab674290e]
+
+Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+vpc_id = "vpc-0ba33abe680c6c9c4"
+
+---------------------------------------------------------------------------------------------------------------------------
+
+PS C:\Users\abhgupta10\terraform\terraform_training_4thdec_8thdec\day5\ProjectA> terraform plan
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following   
+symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_subnet.mysubnets[0] will be created
+  + resource "aws_subnet" "mysubnets" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = "us-east-1a"
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.3.0.0/28"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = false
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Name" = "mysubnet-0-prod"
+        }
+      + tags_all                                       = {
+          + "Name" = "mysubnet-0-prod"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
+  # aws_subnet.mysubnets[1] will be created
+  + resource "aws_subnet" "mysubnets" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = "us-east-1a"
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.3.0.16/28"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = false
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Name" = "mysubnet-1-prod"
+        }
+      + tags_all                                       = {
+          + "Name" = "mysubnet-1-prod"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
+  # module.bucket_for_vpc.aws_vpc.custom_vpc will be created
+  + resource "aws_vpc" "custom_vpc" {
+      + arn                                  = (known after apply)
+      + cidr_block                           = "10.3.0.0/24"
+      + default_network_acl_id               = (known after apply)
+      + default_route_table_id               = (known after apply)
+      + default_security_group_id            = (known after apply)
+      + dhcp_options_id                      = (known after apply)
+      + enable_dns_hostnames                 = (known after apply)
+      + enable_dns_support                   = true
+      + enable_network_address_usage_metrics = (known after apply)
+      + id                                   = (known after apply)
+      + instance_tenancy                     = "default"
+      + ipv6_association_id                  = (known after apply)
+      + ipv6_cidr_block                      = (known after apply)
+      + ipv6_cidr_block_network_border_group = (known after apply)
+      + main_route_table_id                  = (known after apply)
+      + owner_id                             = (known after apply)
+      + tags                                 = {
+          + "Environment" = "prod"
+          + "Name"        = "my-VPC-prod"
+        }
+      + tags_all                             = {
+          + "Environment" = "prod"
+          + "Name"        = "my-VPC-prod"
+        }
+    }
+
+Plan: 3 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + vpc_id = (known after apply)
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+PS C:\Users\abhgupta10\terraform\terraform_training_4thdec_8thdec\day5\ProjectA> terraform apply --auto-approve
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following   
+symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_subnet.mysubnets[0] will be created
+  + resource "aws_subnet" "mysubnets" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = "us-east-1a"
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.3.0.0/28"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = false
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Name" = "mysubnet-0-prod"
+        }
+      + tags_all                                       = {
+          + "Name" = "mysubnet-0-prod"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
+  # aws_subnet.mysubnets[1] will be created
+  + resource "aws_subnet" "mysubnets" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = "us-east-1a"
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.3.0.16/28"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = false
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Name" = "mysubnet-1-prod"
+        }
+      + tags_all                                       = {
+          + "Name" = "mysubnet-1-prod"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
+  # module.bucket_for_vpc.aws_vpc.custom_vpc will be created
+  + resource "aws_vpc" "custom_vpc" {
+      + arn                                  = (known after apply)
+      + cidr_block                           = "10.3.0.0/24"
+      + default_network_acl_id               = (known after apply)
+      + default_route_table_id               = (known after apply)
+      + default_security_group_id            = (known after apply)
+      + dhcp_options_id                      = (known after apply)
+      + enable_dns_hostnames                 = (known after apply)
+      + enable_dns_support                   = true
+      + enable_network_address_usage_metrics = (known after apply)
+      + id                                   = (known after apply)
+      + instance_tenancy                     = "default"
+      + ipv6_association_id                  = (known after apply)
+      + ipv6_cidr_block                      = (known after apply)
+      + ipv6_cidr_block_network_border_group = (known after apply)
+      + main_route_table_id                  = (known after apply)
+      + owner_id                             = (known after apply)
+      + tags                                 = {
+          + "Environment" = "prod"
+          + "Name"        = "my-VPC-prod"
+        }
+      + tags_all                             = {
+          + "Environment" = "prod"
+          + "Name"        = "my-VPC-prod"
+        }
+    }
+
+Plan: 3 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + vpc_id = (known after apply)
+module.bucket_for_vpc.aws_vpc.custom_vpc: Creating...
+module.bucket_for_vpc.aws_vpc.custom_vpc: Creation complete after 4s [id=vpc-0524b861c4b842612]
+aws_subnet.mysubnets[1]: Creating...
+aws_subnet.mysubnets[0]: Creating...
+aws_subnet.mysubnets[1]: Creation complete after 2s [id=subnet-0f69a808e73af7f89]
+aws_subnet.mysubnets[0]: Creation complete after 2s [id=subnet-0adaac90109561b4d]
+
+Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+vpc_id = "vpc-0524b861c4b842612"
