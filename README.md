@@ -81,9 +81,6 @@ Combine the VPC module and the multi-tier application module to deploy a compreh
 
 Showcase the ability to compose and reuse modules to create complex infrastructures.
 
-Task 9: Testing and Validation
-Ensure the correctness of your infrastructure by implementing automated testing using Terraform’s testing tools.
-
 Validate the deployed infrastructure against expected specifications.
 
 Task 10: Destroy Resources and Cleanup
