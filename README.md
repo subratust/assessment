@@ -83,6 +83,6 @@ Showcase the ability to compose and reuse modules to create complex infrastructu
 
 Validate the deployed infrastructure against expected specifications.
 
-Task 10: Destroy Resources and Cleanup
+Task 9: Destroy Resources and Cleanup
 After successfully testing your infrastructure, follow the proper procedures to destroy the deployed resources and clean up the environment.
 
