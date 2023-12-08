@@ -1,122 +1,258 @@
+(base) mandwive2@WKMZT94CBFD9 projects % terraform plan                       
 
-Terraform used the selected providers to generate the following execution
-plan. Resource actions are indicated with the following symbols:
-  [32m+[0m create[0m
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
 
 Terraform will perform the following actions:
 
-[1m  # module.vpc.aws_subnet.main["10.0.1.0/24"][0m will be created
-[0m  [32m+[0m[0m resource "aws_subnet" "main" {
-      [32m+[0m[0m arn                                            = (known after apply)
-      [32m+[0m[0m assign_ipv6_address_on_creation                = false
-      [32m+[0m[0m availability_zone                              = (known after apply)
-      [32m+[0m[0m availability_zone_id                           = (known after apply)
-      [32m+[0m[0m cidr_block                                     = "10.0.1.0/24"
-      [32m+[0m[0m enable_dns64                                   = false
-      [32m+[0m[0m enable_resource_name_dns_a_record_on_launch    = false
-      [32m+[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false
-      [32m+[0m[0m id                                             = (known after apply)
-      [32m+[0m[0m ipv6_cidr_block_association_id                 = (known after apply)
-      [32m+[0m[0m ipv6_native                                    = false
-      [32m+[0m[0m map_public_ip_on_launch                        = true
-      [32m+[0m[0m owner_id                                       = (known after apply)
-      [32m+[0m[0m private_dns_hostname_type_on_launch            = (known after apply)
-      [32m+[0m[0m tags                                           = {
-          [32m+[0m[0m "Environment" = "prod"
-          [32m+[0m[0m "Name"        = "my-subnet-10.0.1.0/24"
+  # module.vpc.aws_subnet.main["10.0.1.0/24"] will be created
+  + resource "aws_subnet" "main" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = (known after apply)
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.0.1.0/24"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = true
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Environment" = "prod"
+          + "Name"        = "my-subnet-10.0.1.0/24"
         }
-      [32m+[0m[0m tags_all                                       = {
-          [32m+[0m[0m "Environment" = "prod"
-          [32m+[0m[0m "Name"        = "my-subnet-10.0.1.0/24"
+      + tags_all                                       = {
+          + "Environment" = "prod"
+          + "Name"        = "my-subnet-10.0.1.0/24"
         }
-      [32m+[0m[0m vpc_id                                         = (known after apply)
+      + vpc_id                                         = (known after apply)
     }
 
-[1m  # module.vpc.aws_subnet.main["10.0.2.0/24"][0m will be created
-[0m  [32m+[0m[0m resource "aws_subnet" "main" {
-      [32m+[0m[0m arn                                            = (known after apply)
-      [32m+[0m[0m assign_ipv6_address_on_creation                = false
-      [32m+[0m[0m availability_zone                              = (known after apply)
-      [32m+[0m[0m availability_zone_id                           = (known after apply)
-      [32m+[0m[0m cidr_block                                     = "10.0.2.0/24"
-      [32m+[0m[0m enable_dns64                                   = false
-      [32m+[0m[0m enable_resource_name_dns_a_record_on_launch    = false
-      [32m+[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false
-      [32m+[0m[0m id                                             = (known after apply)
-      [32m+[0m[0m ipv6_cidr_block_association_id                 = (known after apply)
-      [32m+[0m[0m ipv6_native                                    = false
-      [32m+[0m[0m map_public_ip_on_launch                        = true
-      [32m+[0m[0m owner_id                                       = (known after apply)
-      [32m+[0m[0m private_dns_hostname_type_on_launch            = (known after apply)
-      [32m+[0m[0m tags                                           = {
-          [32m+[0m[0m "Environment" = "prod"
-          [32m+[0m[0m "Name"        = "my-subnet-10.0.2.0/24"
+  # module.vpc.aws_subnet.main["10.0.2.0/24"] will be created
+  + resource "aws_subnet" "main" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = (known after apply)
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.0.2.0/24"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = true
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Environment" = "prod"
+          + "Name"        = "my-subnet-10.0.2.0/24"
         }
-      [32m+[0m[0m tags_all                                       = {
-          [32m+[0m[0m "Environment" = "prod"
-          [32m+[0m[0m "Name"        = "my-subnet-10.0.2.0/24"
+      + tags_all                                       = {
+          + "Environment" = "prod"
+          + "Name"        = "my-subnet-10.0.2.0/24"
         }
-      [32m+[0m[0m vpc_id                                         = (known after apply)
+      + vpc_id                                         = (known after apply)
     }
 
-[1m  # module.vpc.aws_subnet.main["10.0.3.0/24"][0m will be created
-[0m  [32m+[0m[0m resource "aws_subnet" "main" {
-      [32m+[0m[0m arn                                            = (known after apply)
-      [32m+[0m[0m assign_ipv6_address_on_creation                = false
-      [32m+[0m[0m availability_zone                              = (known after apply)
-      [32m+[0m[0m availability_zone_id                           = (known after apply)
-      [32m+[0m[0m cidr_block                                     = "10.0.3.0/24"
-      [32m+[0m[0m enable_dns64                                   = false
-      [32m+[0m[0m enable_resource_name_dns_a_record_on_launch    = false
-      [32m+[0m[0m enable_resource_name_dns_aaaa_record_on_launch = false
-      [32m+[0m[0m id                                             = (known after apply)
-      [32m+[0m[0m ipv6_cidr_block_association_id                 = (known after apply)
-      [32m+[0m[0m ipv6_native                                    = false
-      [32m+[0m[0m map_public_ip_on_launch                        = true
-      [32m+[0m[0m owner_id                                       = (known after apply)
-      [32m+[0m[0m private_dns_hostname_type_on_launch            = (known after apply)
-      [32m+[0m[0m tags                                           = {
-          [32m+[0m[0m "Environment" = "prod"
-          [32m+[0m[0m "Name"        = "my-subnet-10.0.3.0/24"
+  # module.vpc.aws_subnet.main["10.0.3.0/24"] will be created
+  + resource "aws_subnet" "main" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = (known after apply)
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.0.3.0/24"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = true
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Environment" = "prod"
+          + "Name"        = "my-subnet-10.0.3.0/24"
         }
-      [32m+[0m[0m tags_all                                       = {
-          [32m+[0m[0m "Environment" = "prod"
-          [32m+[0m[0m "Name"        = "my-subnet-10.0.3.0/24"
+      + tags_all                                       = {
+          + "Environment" = "prod"
+          + "Name"        = "my-subnet-10.0.3.0/24"
         }
-      [32m+[0m[0m vpc_id                                         = (known after apply)
+      + vpc_id                                         = (known after apply)
     }
 
-[1m  # module.vpc.aws_vpc.main[0m will be created
-[0m  [32m+[0m[0m resource "aws_vpc" "main" {
-      [32m+[0m[0m arn                                  = (known after apply)
-      [32m+[0m[0m cidr_block                           = "10.0.0.0/16"
-      [32m+[0m[0m default_network_acl_id               = (known after apply)
-      [32m+[0m[0m default_route_table_id               = (known after apply)
-      [32m+[0m[0m default_security_group_id            = (known after apply)
-      [32m+[0m[0m dhcp_options_id                      = (known after apply)
-      [32m+[0m[0m enable_dns_hostnames                 = (known after apply)
-      [32m+[0m[0m enable_dns_support                   = true
-      [32m+[0m[0m enable_network_address_usage_metrics = (known after apply)
-      [32m+[0m[0m id                                   = (known after apply)
-      [32m+[0m[0m instance_tenancy                     = "default"
-      [32m+[0m[0m ipv6_association_id                  = (known after apply)
-      [32m+[0m[0m ipv6_cidr_block                      = (known after apply)
-      [32m+[0m[0m ipv6_cidr_block_network_border_group = (known after apply)
-      [32m+[0m[0m main_route_table_id                  = (known after apply)
-      [32m+[0m[0m owner_id                             = (known after apply)
-      [32m+[0m[0m tags                                 = {
-          [32m+[0m[0m "Environment" = "prod"
-          [32m+[0m[0m "Name"        = "my-vpc"
+  # module.vpc.aws_vpc.main will be created
+  + resource "aws_vpc" "main" {
+      + arn                                  = (known after apply)
+      + cidr_block                           = "10.0.0.0/16"
+      + default_network_acl_id               = (known after apply)
+      + default_route_table_id               = (known after apply)
+      + default_security_group_id            = (known after apply)
+      + dhcp_options_id                      = (known after apply)
+      + enable_dns_hostnames                 = (known after apply)
+      + enable_dns_support                   = true
+      + enable_network_address_usage_metrics = (known after apply)
+      + id                                   = (known after apply)
+      + instance_tenancy                     = "default"
+      + ipv6_association_id                  = (known after apply)
+      + ipv6_cidr_block                      = (known after apply)
+      + ipv6_cidr_block_network_border_group = (known after apply)
+      + main_route_table_id                  = (known after apply)
+      + owner_id                             = (known after apply)
+      + tags                                 = {
+          + "Environment" = "prod"
+          + "Name"        = "my-vpc"
         }
-      [32m+[0m[0m tags_all                             = {
-          [32m+[0m[0m "Environment" = "prod"
-          [32m+[0m[0m "Name"        = "my-vpc"
+      + tags_all                             = {
+          + "Environment" = "prod"
+          + "Name"        = "my-vpc"
         }
     }
 
-[1mPlan:[0m 4 to add, 0 to change, 0 to destroy.
-[0m[90m
-─────────────────────────────────────────────────────────────────────────────[0m
+Plan: 4 to add, 0 to change, 0 to destroy.
 
-Note: You didn't use the -out option to save this plan, so Terraform can't
-guarantee to take exactly these actions if you run "terraform apply" now.
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if you run "terraform apply" now.
+(base) mandwive2@WKMZT94CBFD9 projects % terraform apply
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # module.vpc.aws_subnet.main["10.0.1.0/24"] will be created
+  + resource "aws_subnet" "main" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = (known after apply)
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.0.1.0/24"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = true
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Environment" = "prod"
+          + "Name"        = "my-subnet-10.0.1.0/24"
+        }
+      + tags_all                                       = {
+          + "Environment" = "prod"
+          + "Name"        = "my-subnet-10.0.1.0/24"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
+  # module.vpc.aws_subnet.main["10.0.2.0/24"] will be created
+  + resource "aws_subnet" "main" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = (known after apply)
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.0.2.0/24"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = true
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Environment" = "prod"
+          + "Name"        = "my-subnet-10.0.2.0/24"
+        }
+      + tags_all                                       = {
+          + "Environment" = "prod"
+          + "Name"        = "my-subnet-10.0.2.0/24"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
+  # module.vpc.aws_subnet.main["10.0.3.0/24"] will be created
+  + resource "aws_subnet" "main" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = (known after apply)
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.0.3.0/24"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = true
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags                                           = {
+          + "Environment" = "prod"
+          + "Name"        = "my-subnet-10.0.3.0/24"
+        }
+      + tags_all                                       = {
+          + "Environment" = "prod"
+          + "Name"        = "my-subnet-10.0.3.0/24"
+        }
+      + vpc_id                                         = (known after apply)
+    }
+
+  # module.vpc.aws_vpc.main will be created
+  + resource "aws_vpc" "main" {
+      + arn                                  = (known after apply)
+      + cidr_block                           = "10.0.0.0/16"
+      + default_network_acl_id               = (known after apply)
+      + default_route_table_id               = (known after apply)
+      + default_security_group_id            = (known after apply)
+      + dhcp_options_id                      = (known after apply)
+      + enable_dns_hostnames                 = (known after apply)
+      + enable_dns_support                   = true
+      + enable_network_address_usage_metrics = (known after apply)
+      + id                                   = (known after apply)
+      + instance_tenancy                     = "default"
+      + ipv6_association_id                  = (known after apply)
+      + ipv6_cidr_block                      = (known after apply)
+      + ipv6_cidr_block_network_border_group = (known after apply)
+      + main_route_table_id                  = (known after apply)
+      + owner_id                             = (known after apply)
+      + tags                                 = {
+          + "Environment" = "prod"
+          + "Name"        = "my-vpc"
+        }
+      + tags_all                             = {
+          + "Environment" = "prod"
+          + "Name"        = "my-vpc"
+        }
+    }
+
+Plan: 4 to add, 0 to change, 0 to destroy.
+
+Do you want to perform these actions in workspace "prod"?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+module.vpc.aws_vpc.main: Creating...
+module.vpc.aws_vpc.main: Creation complete after 4s [id=vpc-0691eb5cca5e83594]
+module.vpc.aws_subnet.main["10.0.3.0/24"]: Creating...
+module.vpc.aws_subnet.main["10.0.2.0/24"]: Creating...
+module.vpc.aws_subnet.main["10.0.1.0/24"]: Creating...
+module.vpc.aws_subnet.main["10.0.3.0/24"]: Still creating... [10s elapsed]
+module.vpc.aws_subnet.main["10.0.2.0/24"]: Still creating... [10s elapsed]
+module.vpc.aws_subnet.main["10.0.1.0/24"]: Still creating... [10s elapsed]
+module.vpc.aws_subnet.main["10.0.2.0/24"]: Creation complete after 13s [id=subnet-05e0337284ae22ebf]
+module.vpc.aws_subnet.main["10.0.1.0/24"]: Creation complete after 13s [id=subnet-0b1e966faccb5f1c4]
+module.vpc.aws_subnet.main["10.0.3.0/24"]: Creation complete after 13s [id=subnet-09c1f98e31f48b58b]
+
+Apply complete! Resources: 4 added, 0 changed, 0 destroyed.
