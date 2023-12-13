@@ -10,36 +10,29 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: TerraformInstaller@1
+- task: TerraformTaskV4@0
+  displayName: 'Install Terraform'
   inputs:
     terraformVersion: 'latest'
 
 - checkout: self
   displayName: 'Checkout repository'
 
-- task: TerraformTaskV4@1
-  displayName: 'Terraform Init'
+
+- task: TerraformTaskV4@4
   inputs:
+    provider: 'azurerm'
     command: 'init'
-    workingDirectory: '$(Build.SourcesDirectory)'
-    backendType: 'azurerm'
-    ensureBackend: true
 
-- task: TerraformTaskV3@3
-  displayName: 'Terraform Validate'
+- task: TerraformTaskV4@4
   inputs:
+    provider: 'azurerm'
     command: 'validate'
-    workingDirectory: '$(Build.SourcesDirectory)'
-- task: TerraformTaskV3@3
-  displayName: 'Terraform Plan'
+- task: TerraformTaskV4@4
   inputs:
+    provider: 'azurerm'
     command: 'plan'
-    workingDirectory: '$(Build.SourcesDirectory)'
-    commandOptions: '-out=tfplan'
-- task: TerraformTaskV3@3
-  displayName: 'Terraform Apply'
+- task: TerraformTaskV4@4
   inputs:
+    provider: 'azurerm'
     command: 'apply'
-    workingDirectory: '$(Build.SourcesDirectory)'
-    commandOptions: '-auto-approve -input=false tfplan'
-
