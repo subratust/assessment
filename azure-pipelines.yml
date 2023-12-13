@@ -17,7 +17,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
 - task: TerraformTaskV4@4
   inputs:
     provider: 'azurerm'
