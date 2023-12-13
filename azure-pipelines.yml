@@ -44,6 +44,5 @@ steps:
   inputs:
     command: 'apply'
     workingDirectory: '$(Build.SourcesDirectory)'
-    environmentServiceName: '<service_connection_name>'
     commandOptions: '-auto-approve -input=false tfplan'
 
